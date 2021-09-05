@@ -1,0 +1,12 @@
+D:\Projetos\ProjetoCadastro\source\Site.Dados\bin\Debug\net5.0\Site.Dados.deps.json
+D:\Projetos\ProjetoCadastro\source\Site.Dados\bin\Debug\net5.0\Site.Dados.dll
+D:\Projetos\ProjetoCadastro\source\Site.Dados\bin\Debug\net5.0\ref\Site.Dados.dll
+D:\Projetos\ProjetoCadastro\source\Site.Dados\bin\Debug\net5.0\Site.Dados.pdb
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.csprojAssemblyReference.cache
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.AssemblyInfoInputs.cache
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.AssemblyInfo.cs
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.csproj.CoreCompileInputs.cache
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.dll
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\ref\Site.Dados.dll
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.pdb
