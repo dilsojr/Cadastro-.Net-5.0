@@ -1,0 +1,1 @@
+Olá| Projeto iniciado para estudar e aprender mais sobre .NET 5.0
