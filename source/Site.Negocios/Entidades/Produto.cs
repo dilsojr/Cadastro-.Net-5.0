@@ -4,6 +4,7 @@ namespace Site.Negocios.Entidades
 {
     public class Produto : Entidade
     {
+        public Guid FornecedorId { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public decimal Valor { get; set; }

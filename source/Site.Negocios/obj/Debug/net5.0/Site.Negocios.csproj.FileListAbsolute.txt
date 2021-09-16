@@ -2,7 +2,6 @@ D:\Projetos\ProjetoCadastro\source\Site.Negocios\bin\Debug\net5.0\Site.Negocios.
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\bin\Debug\net5.0\Site.Negocios.dll
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\bin\Debug\net5.0\ref\Site.Negocios.dll
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\bin\Debug\net5.0\Site.Negocios.pdb
-D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\Site.Negocios.csprojAssemblyReference.cache
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\Site.Negocios.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\Site.Negocios.AssemblyInfoInputs.cache
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\Site.Negocios.AssemblyInfo.cs
@@ -10,3 +9,4 @@ D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\Site.Negocios.
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\Site.Negocios.dll
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\ref\Site.Negocios.dll
 D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\Site.Negocios.pdb
+D:\Projetos\ProjetoCadastro\source\Site.Negocios\obj\Debug\net5.0\Site.Negocios.csprojAssemblyReference.cache

@@ -10,3 +10,6 @@ D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.csproj
 D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.dll
 D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\ref\Site.Dados.dll
 D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.pdb
+D:\Projetos\ProjetoCadastro\source\Site.Dados\bin\Debug\net5.0\Site.Negocios.dll
+D:\Projetos\ProjetoCadastro\source\Site.Dados\bin\Debug\net5.0\Site.Negocios.pdb
+D:\Projetos\ProjetoCadastro\source\Site.Dados\obj\Debug\net5.0\Site.Dados.csproj.CopyComplete
