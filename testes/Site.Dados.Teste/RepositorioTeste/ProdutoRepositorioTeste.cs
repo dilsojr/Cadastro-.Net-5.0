@@ -16,18 +16,16 @@ namespace Site.Dados.Teste.RepositorioTeste
 
         private ProdutoRepositorio produtoRepositorio;
         private Fornecedor fornecedor;
-       
+
         [SetUp]
         public void Inicializar()
         {
             var options = new DbContextOptionsBuilder<MeuDBContext>().UseInMemoryDatabase("produto_teste").Options;
             fornecedor = CriarFornecedor();
-            using (var context = new MeuDBContext(options))
-            {
-                produtoRepositorio = new ProdutoRepositorio(context);
-                context.Fornecedores.Add(fornecedor);
-                context.SaveChanges();
-            }
+            var context = new MeuDBContext(options);
+            produtoRepositorio = new ProdutoRepositorio(context);
+            context.Fornecedores.Add(fornecedor);
+            context.SaveChanges();
         }
 
         [Test]
@@ -40,6 +38,17 @@ namespace Site.Dados.Teste.RepositorioTeste
             retorno.Count.Should().Be(1);
             retorno[0].Nome.Should().Be("Celular");
 
+        }
+
+        [Test]
+        public void ObterTodosProdutosESeusFornecedores()
+        {
+            var retorno = produtoRepositorio.ObterProdutosEFornecedores().Result.ToList();
+
+            retorno.Should().NotBeNull();
+            retorno.Count.Should().Be(1);
+            retorno[0].Nome.Should().Be("Celular");
+            retorno[0].Fornecedor.Nome.Should().Be("Fornecedor SA");
         }
 
         private Fornecedor CriarFornecedor()
@@ -76,7 +85,7 @@ namespace Site.Dados.Teste.RepositorioTeste
                 Imagem = "123",
                 QuantidadeEstoque = 1
             };
-           
+
             produtos.Add(produto);
 
             fornecedor.Produtos = produtos;

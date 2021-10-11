@@ -13,8 +13,8 @@ namespace Site.Dados.Repositorios
 {
     public class Repositorio<T> : IRepositorio<T> where T : Entidade, new ()
     {
-        private readonly MeuDBContext contexto;
-        private readonly DbSet<T> DbSet;
+        public readonly MeuDBContext contexto;
+        protected readonly DbSet<T> DbSet;
 
         public Repositorio(MeuDBContext meuDBContext)
         {
@@ -60,7 +60,7 @@ namespace Site.Dados.Repositorios
             return await contexto.SaveChangesAsync();
         }
 
-        public void Dispose()
+        public virtual void Dispose()
         {
             contexto?.Dispose();
         }
