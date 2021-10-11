@@ -7,8 +7,8 @@ namespace Site.Negocios.Interfaces
 {
     public interface IProdutoRepositorio : IRepositorio<Produto>
     {
-        Task<List<Produto>> ObterProdutosPorFornecedor(Guid fornecedorId);
-        Task<List<Produto>> ObterProdutosEFornecdores();
+        Task<IEnumerable<Produto>> ObterProdutosPorFornecedor(Guid fornecedorId);
+        Task<IEnumerable<Produto>> ObterProdutosEFornecedores();
 
     }
 }

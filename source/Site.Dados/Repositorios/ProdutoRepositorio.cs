@@ -1,4 +1,5 @@
-﻿using Site.Dados.Contexto;
+﻿using Microsoft.EntityFrameworkCore;
+using Site.Dados.Contexto;
 using Site.Negocios.Entidades;
 using Site.Negocios.Interfaces;
 using System;
@@ -19,9 +20,10 @@ namespace Site.Dados.Repositorios
         {
             return await Buscar(x => x.FornecedorId == fornecedorId);
         }
-        public async Task<IEnumerable<Produto>> ObterProdutosEFornecdores()
+        
+        public async Task<IEnumerable<Produto>> ObterProdutosEFornecedores()
         {
-            throw new NotImplementedException();
+            return await contexto.Produtos.AsNoTracking().Include(x => x.Fornecedor).OrderBy(x => x.Nome).ToListAsync();
         }
 
     }
