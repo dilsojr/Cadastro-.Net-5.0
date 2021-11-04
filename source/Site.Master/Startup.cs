@@ -7,6 +7,7 @@ using Site.Dados.Contexto;
 using Microsoft.EntityFrameworkCore;
 using Site.Negocios.Interfaces;
 using Site.Dados.Repositorios;
+using AutoMapper;
 
 namespace Site.Master
 {
@@ -25,6 +26,9 @@ namespace Site.Master
             services.AddDbContext<MeuDBContext>(options => Configuration.GetConnectionString("DefaultConnection"));
             services.AddScoped<MeuDBContext>();
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+            services.AddScoped<IFornecedorRepositorio, FornecedorRepositorio>();
+            services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
+            services.AddAutoMapper(typeof(Startup));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

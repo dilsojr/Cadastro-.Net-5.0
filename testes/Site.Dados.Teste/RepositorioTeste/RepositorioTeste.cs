@@ -4,15 +4,8 @@ using NUnit.Framework;
 using Site.Dados.Contexto;
 using Site.Dados.Repositorios;
 using Site.Negocios.Entidades;
-using Site.Negocios.Interfaces;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Site.Dados.Teste.RepositorioTeste
 {
