@@ -55,7 +55,7 @@ namespace Site.Dados.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FornecedorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "varchar(200)", nullable: false),
-                    Descricao = table.Column<string>(type: "vatchar(1000)", nullable: false),
+                    Descricao = table.Column<string>(type: "varchar(1000)", nullable: false),
                     Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DataInclusao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Imagem = table.Column<string>(type: "varchar(100)", nullable: false),
