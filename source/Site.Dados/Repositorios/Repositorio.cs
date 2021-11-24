@@ -13,10 +13,10 @@ namespace Site.Dados.Repositorios
 {
     public class Repositorio<T> : IRepositorio<T> where T : Entidade, new ()
     {
-        public readonly MeuDBContext contexto;
+        public MeuDbContext contexto;
         protected readonly DbSet<T> DbSet;
 
-        public Repositorio(MeuDBContext meuDBContext)
+        public Repositorio(MeuDbContext meuDBContext)
         {
             contexto = meuDBContext;
             DbSet = meuDBContext.Set<T>();

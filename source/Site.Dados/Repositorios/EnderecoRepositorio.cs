@@ -12,7 +12,7 @@ namespace Site.Dados.Repositorios
 {
     public class EnderecoRepositorio : Repositorio<Endereco>, IEnderecoRepositorio
     {
-        public EnderecoRepositorio(MeuDBContext meuDbContext) : base(meuDbContext)
+        public EnderecoRepositorio(MeuDbContext meuDbContext) : base(meuDbContext)
         { }
 
         public async Task<Endereco> ObterEnderecoPorFornecedor(Guid fornecedorId)

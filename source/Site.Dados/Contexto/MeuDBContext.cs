@@ -1,22 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Site.Negocios.Entidades;
+//using Site.Negocios.Entidades;
 using System.Linq;
 
 namespace Site.Dados.Contexto
 {
-    public class MeuDBContext : DbContext
+    public class MeuDbContext : DbContext
     {
-        public MeuDBContext (DbContextOptions<MeuDBContext> dbContextOptions) : base (dbContextOptions)
+        public MeuDbContext(DbContextOptions<MeuDbContext> dbContextOptions) : base(dbContextOptions)
         { }
 
-        public DbSet<Produto> Produtos { get; set; }
-        public DbSet<Fornecedor> Fornecedores { get; set; }
-        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Site.Negocios.Entidades.Produto> Produtos { get; set; }
+        public DbSet<Site.Negocios.Entidades.Fornecedor> Fornecedores { get; set; }
+        public DbSet<Site.Negocios.Entidades.Endereco> Enderecos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MeuDBContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MeuDbContext).Assembly);
 
             foreach (var item in modelBuilder.Model.GetEntityTypes().SelectMany(x => x.GetForeignKeys()))
             {

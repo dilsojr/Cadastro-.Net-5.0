@@ -17,8 +17,8 @@ namespace Site.Dados.Teste.RepositorioTeste
         [SetUp]
         public void Inicializar()
         {
-            var options = new DbContextOptionsBuilder<MeuDBContext>().UseInMemoryDatabase("repositorio_teste").Options;
-            var context = new MeuDBContext(options);
+            var options = new DbContextOptionsBuilder<MeuDbContext>().UseInMemoryDatabase("repositorio_teste").Options;
+            var context = new MeuDbContext(options);
             repositorio = new Repositorio<Produto>(context);
             produto = CriarProduto();
             context.Produtos.Add(produto);

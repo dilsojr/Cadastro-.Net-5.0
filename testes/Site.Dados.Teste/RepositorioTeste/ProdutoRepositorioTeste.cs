@@ -20,9 +20,9 @@ namespace Site.Dados.Teste.RepositorioTeste
         [SetUp]
         public void Inicializar()
         {
-            var options = new DbContextOptionsBuilder<MeuDBContext>().UseInMemoryDatabase("produto_teste").Options;
+            var options = new DbContextOptionsBuilder<MeuDbContext>().UseInMemoryDatabase("produto_teste").Options;
             fornecedor = CriarFornecedor();
-            var context = new MeuDBContext(options);
+            var context = new MeuDbContext(options);
             produtoRepositorio = new ProdutoRepositorio(context);
             context.Fornecedores.Add(fornecedor);
             context.SaveChanges();

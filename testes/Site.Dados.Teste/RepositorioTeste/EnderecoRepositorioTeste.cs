@@ -11,14 +11,14 @@ namespace Site.Dados.Teste.RepositorioTeste
     public class EnderecoRepositorioTeste
     {
         private EnderecoRepositorio repositorio;
-        private DbContextOptions<MeuDBContext> options;
-        private MeuDBContext context;
+        private DbContextOptions<MeuDbContext> options;
+        private MeuDbContext context;
 
         [SetUp]
         public void Inicializar()
         {
-            options = new DbContextOptionsBuilder<MeuDBContext>().UseInMemoryDatabase("repositorio_teste").Options;
-            context = new MeuDBContext(options);
+            options = new DbContextOptionsBuilder<MeuDbContext>().UseInMemoryDatabase("repositorio_teste").Options;
+            context = new MeuDbContext(options);
             repositorio = new EnderecoRepositorio(context);
         }
 
@@ -26,7 +26,7 @@ namespace Site.Dados.Teste.RepositorioTeste
         public void DadoFornecedorIdDeveBuscarEndereco()
         {
             var fornecedor = CriarFornecedor();
-            using (context = new MeuDBContext(options))
+            using (context = new MeuDbContext(options))
             {
                 context.Fornecedores.Add(fornecedor);
                 context.SaveChanges();

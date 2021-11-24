@@ -12,7 +12,7 @@ namespace Site.Dados.Repositorios
 {
     public class ProdutoRepositorio : Repositorio<Produto>, IProdutoRepositorio
     {
-        public ProdutoRepositorio(MeuDBContext meuDBContext) : base(meuDBContext)
+        public ProdutoRepositorio(MeuDbContext meuDBContext) : base(meuDBContext)
         {
         }
 

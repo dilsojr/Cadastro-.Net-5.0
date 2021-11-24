@@ -13,22 +13,31 @@ namespace Site.Master
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+        public Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(hostingEnvironment.ContentRootPath)
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{hostingEnvironment.EnvironmentName}.json", true, true)
+                .AddEnvironmentVariables();
+
+            //if (hostingEnvironment.IsDevelopment())
+            //    builder.AddUserSecrets<Startup>();
+
+            Configuration = builder.Build();
         }
 
-        public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<MeuDBContext>(options => Configuration.GetConnectionString("DefaultConnection"));
-            services.AddScoped<MeuDBContext>();
+            services.AddDbContext<MeuDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<MeuDbContext>();
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
             services.AddScoped<IFornecedorRepositorio, FornecedorRepositorio>();
             services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
-            services.AddAutoMapper(typeof(Startup));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
